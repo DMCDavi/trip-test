@@ -1,5 +1,57 @@
 #root {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 28px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(28, 26, 23, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.app-nav__brand {
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.app-nav__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app-nav__link {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.app-nav__link--active {
+  border-color: rgba(28, 26, 23, 0.2);
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.app-shell__content {
   padding: 48px 24px 80px;
   display: flex;
   justify-content: center;
@@ -195,6 +247,15 @@
   color: #b4442a;
 }
 
+.planner-placeholder {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(28, 26, 23, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--color-ink-soft);
+  font-weight: 600;
+}
+
 .packing-board {
   display: grid;
   gap: 16px;
@@ -286,6 +347,10 @@
 
 @media (max-width: 768px) {
   #root {
+    padding: 0;
+  }
+
+  .app-shell__content {
     padding: 32px 18px 56px;
   }
 
