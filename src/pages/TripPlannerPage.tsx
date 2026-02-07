@@ -1,3 +1,6 @@
+import { RemindersPanel } from '../modules/trip-planner/components/organisms/RemindersPanel'
+import { CalendarPanel } from '../modules/trip-planner/components/organisms/CalendarPanel'
+
 export const TripPlannerPage = () => {
   return (
     <div className="page">
@@ -20,7 +23,7 @@ export const TripPlannerPage = () => {
             Capture quick reminders and keep them visible during planning.
           </p>
         </div>
-        <div className="planner-placeholder">Reminders module coming next.</div>
+        <RemindersPanel />
       </section>
 
       <section className="page__panel page__panel--board">
@@ -30,7 +33,7 @@ export const TripPlannerPage = () => {
             Visualize important dates and upcoming events for the trip.
           </p>
         </div>
-        <div className="planner-placeholder">Calendar module coming next.</div>
+        <CalendarPanel />
       </section>
     </div>
   )
